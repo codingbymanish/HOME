@@ -249,6 +249,34 @@ color: rgb(227,79,39);
     background-color:  rgb(87,8,203);
 }
 
+
+
+
+.phptext{
+    color: rgb(119,123,179);
+}
+
+.phpmain{
+    border: 1px solid  rgb(119,123,179);
+}
+.php{
+    background-color: rgb(119,123,179);
+}
+
+
+
+
+.vstext{
+    color: rgb(9,118,188);
+}
+
+.vsmain{
+    border: 1px solid  rgb(9,118,188);
+}
+.vs{
+    background-color: rgb(9,118,188);
+}
+
 /* canva card=============== */
 
 
