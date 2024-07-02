@@ -2911,19 +2911,20 @@ blockquote cite::before {
 .form_group textarea {
 	display: block;
 	width: 100%;
-	background: var(--tj-black-2);
-	border: 1px solid var(--tj-grey-4);
 	font-size: 16px;
 	line-height: 1;
-	color: var(--tj-white);
-	padding: 14px 20px;
-	border-radius: 8px;
+	color: #8a8a8a;	
 	transition: all 0.3s 0s ease-out;
 	outline: none;
-	height: auto;
+	height: auto;	
+	background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--tj-grey-5);
+    border-radius: 0px;
+    padding: 15px 0px 15px;
 }
 .form_group .nice-select {
-	padding: 17px 20px;
+	/* padding: 17px 20px;*/
 }
 .form_group textarea {
 	height: 200px;
