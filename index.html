@@ -918,23 +918,32 @@
                            </p>
                         </div>
                         <div class="tj-contact-form style-2">
-                           <form id="contact-form"   enctype="multipart/form-data" https://formspree.io/f/mrbzzkee
+                           <form id="contact-form"   enctype="multipart/form-data"
   method="POST">
                               <div class="form_group">
-                                 <input type="text" name="name" placeholder=" Your name" autocomplete="off" />
+                                 <input type="text" name="name" id="name" placeholder=" Your name" autocomplete="off" />
                               </div>
 
                               <div class="form_group">
-                                 <input type="email" name="email" placeholder="Email address" autocomplete="off" />
+                                 <input type="email" name="email" id="email" placeholder="Email address" autocomplete="off" />
                               </div>
                               <div class="form_group">
-                                 <input type="number" name="number" placeholder="Phone number" autocomplete="off" />
+                                 <input type="number" name="number" id="phone" placeholder="Phone number" autocomplete="off" />
                               </div>
-                              <div class="form_group">
-                                 <textarea name="message"  placeholder="Message"></textarea>
+                              <div class="form_group">                                 
+                                 <select name="" id="services" >
+                                    <option value="Select Your Website Type" selected disabled>Select Your Website Type</option>
+                                    <option value="Static Website">Static Website</option>
+                                    <option value="Dynamic Website">Dynamic Website</option>
+                                    <option value="E-commerce Website">E-commerce Website</option>
+                                 </select>
+
+                              </div>
+                              <div class="form_group " >
+                                 <textarea name="message" id="message" style="margin-top: 101px;"  placeholder="Message"></textarea>
                               </div>
                               <div class="form_btn">
-                                 <button type="submit" class="btn tj-btn-primary-2">Send Message
+                                 <button type="submit" class="btn tj-btn-primary-2" onclick="getwhatsapp()">Send Message
                                     <span class="icon_box">
                                        <i class="fa-solid fa-arrow-right  icon_first"></i>
                                        <i class="fa-solid fa-arrow-right  icon_second"></i>
@@ -998,45 +1007,6 @@
       </section>
       <!-- CONTACT SECTION END -->
 
-      <!-- BEGIN: Contact Form Success Modal Message -->
-<!--       <div class="modal contact_modal" id="message_sent" tabindex="-1">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <span class="modal-title"><strong>Message Sent Successfully</strong></span>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fas fa-times"></i></button>
-               </div>
-               <div class="modal-body">
-                  <p>Thank you for contacting us. We will get back to you shortly.<br />Have a great day!</p>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div> -->
-      <!-- END: Contact Form Success Modal Message -->
-
-      <!-- BEGIN: Contact Form Fail Modal Message -->
-<!--       <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <span class="modal-title"><strong>Error</strong></span>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fas fa-times"></i></button>
-               </div>
-               <div class="modal-body">
-                  <p>Oops! Something went wrong, please try again.</p>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div> -->
-      <!-- END: Contact Form Fail Modal Message End -->
    </main>
 
    <!-- FOOTER AREA START -->
@@ -1067,7 +1037,24 @@
       </div>
    </footer>
    <!-- FOOTER AREA END -->
+<script>
+   function getwhatsapp(){
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var services = document.getElementById("services").value;
+      var message = document.getElementById("message").value;
 
+      var url ="https://wa.me/918506982838?text="
+      + "Name: " + name + "%0a"
+      + "Email: " + email + "%0a"
+      + "Phone: " + phone + "%0a"
+      + "Services: " + services + "%0a"
+      + "Message: " + message;
+
+      window.open(url, '_blank'),focus();
+   }
+</script>
    <!-- CSS here -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/bootstrap.bundle.min.js"></script>
